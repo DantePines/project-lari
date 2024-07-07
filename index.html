@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lari a melhor</title>
+</head>
+<style>
+    body{
+        background-color: rgb(77, 4, 4);
+    }
+    .painel {
+        margin: auto;
+        background-color: white;
+        width: 500px;
+        height: 500px;
+        border-radius: 20px;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #sim {
+
+        height: 40px;
+        width: 60px;
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-left: -60px;
+    }
+    #Nao {
+        position: absolute;
+        height: 40px;
+        width: 60px;
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-left: 30px;
+    }
+</style>
+<body>
+    <div class="painel">
+        <h1>Lari melhor pessoa do mundo</h1>
+        <h2>Sabia que to boiola por vc?</h2>
+        <a href="https://www.youtube.com/watch?v=0mJMW2CzTiA"><button id="sim"> sim!</button></a>
+        <button onmouseover="fuja()"  id="Nao"> Nao!</button>
+        <img src="https://i.pinimg.com/originals/7b/df/06/7bdf0652d820489e07b41129ecc8b1e4.gif" alt="">
+    </div>
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("Nao")
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random()* maxX);
+            var aleatorioY = Math.floor(Math.random ()* maxY)
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+
+    </script>
+</body>
+</html>
